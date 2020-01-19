@@ -1,0 +1,12 @@
+C:\Users\ROG\source\repos\CarsRest\CarCore\bin\Debug\CarCore.dll
+C:\Users\ROG\source\repos\CarsRest\CarCore\bin\Debug\CarCore.pdb
+C:\Users\ROG\source\repos\CarsRest\CarCore\obj\Debug\CarCore.csprojAssemblyReference.cache
+C:\Users\ROG\source\repos\CarsRest\CarCore\obj\Debug\CarCore.csproj.CoreCompileInputs.cache
+C:\Users\ROG\source\repos\CarsRest\CarCore\obj\Debug\CarCore.dll
+C:\Users\ROG\source\repos\CarsRest\CarCore\obj\Debug\CarCore.pdb
+C:\Users\Petko\Downloads\CarsRest\CarsRest\CarCore\bin\Debug\CarCore.dll
+C:\Users\Petko\Downloads\CarsRest\CarsRest\CarCore\bin\Debug\CarCore.pdb
+C:\Users\Petko\Downloads\CarsRest\CarsRest\CarCore\obj\Debug\CarCore.csprojAssemblyReference.cache
+C:\Users\Petko\Downloads\CarsRest\CarsRest\CarCore\obj\Debug\CarCore.csproj.CoreCompileInputs.cache
+C:\Users\Petko\Downloads\CarsRest\CarsRest\CarCore\obj\Debug\CarCore.dll
+C:\Users\Petko\Downloads\CarsRest\CarsRest\CarCore\obj\Debug\CarCore.pdb

@@ -1,0 +1,135 @@
+﻿swagger: '2.0'
+info:
+  title: Car Repository REST API
+  description: Car Repository API
+  version: "1.0.0"
+schemes:
+- https
+produces:
+- application/json
+paths:
+  /api/cars:
+    get:
+      summary: "Retrieves all cars"
+      operationId: "getAllCars"
+      responses:
+        200:
+          description: "Cars retrieved"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Car"
+    post:
+      summary: "Register car"
+      operationId: "registerCar"
+      parameters:
+      - in: body
+        name: registerCarRequest
+        required: true
+        schema:
+          $ref: "#/definitions/RegisterCarRequest"
+      responses:
+        201:
+          description: "Car registered"
+          schema:
+            $ref: "#/definitions/Car"
+  /api/cars/{plate}:
+    get:
+      summary: "Get Car By Plate"
+      operationId: "getCarByPlate"
+      parameters:
+        - in: path
+          name: plate
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Car retrieved successfully"
+          schema:
+            $ref: "#/definitions/Car"
+        404:
+          description: "Car was not found"
+    delete:
+      summary: "Delete car by plate"
+      operationId: "deleteCarByPlate"
+      parameters:
+        - in: path
+          name: plate
+          required: true
+          type: string
+          description: "The plate of the car"
+      responses:
+        204:
+          description: "Successfully deleted car"
+    put:
+      summary: "Update car by plate"
+      operationId: "updateCarById"
+      parameters:
+        - in: path
+          name: plate
+          required: true
+          type: string
+          description: "The plate of the car"
+        - in: body
+          name: updateCarRequest
+          required: true
+          schema:
+            $ref: '#/definitions/UpdateCarRequest'
+      responses:
+        200:
+          description: "Car updated succesfully"
+		  schema:
+            $ref: '#/definitions/Car'
+definitions:
+  Car:
+    type: object
+	properties:
+		plate:
+			type: string
+		kilometers:
+			type: number
+			format: integer
+		model:
+			$ref: "#/definitions/Model"
+		brand:
+			$ref: "#/definitions/Brand"
+  RegisterCarRequest:
+    type: object
+	properties:
+		plate:
+			type: string
+		kilometers:
+			type: number
+			format: integer
+		model:
+			$ref: "#/definitions/Model"
+		brand:
+			$ref: "#/definitions/Brand"
+  UpdateCarRequest:
+    type: object
+	properties:
+		plate:
+			type: string
+		kilometers:
+			type: number
+			format: integer
+		model:
+			$ref: "#/definitions/Model"
+		brand:
+			$ref: "#/definitions/Brand"
+  Brand:
+    type: object
+    properties:
+		name:
+			type: string
+		country:
+			type: string
+  Model:
+    type: object
+    properties:
+		name:
+			type: string
+		years:
+			type: number
+			format: integer
+basePath: api/cars
